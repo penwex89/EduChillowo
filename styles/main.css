@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+/* Estilos base para EduChill - Glassmorphism/Neumorphism */
+body {
+  font-family: 'Quicksand', 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  color: #2d3a4a;
+}
+
+header {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#site-title {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  color: #333;
+  text-shadow: 0 2px 8px #fff8;
+  font-weight: 600;
+}
+
+#site-desc {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.lesson {
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 4px #b0c4de44;
+  backdrop-filter: blur(8px);
+  border-radius: 24px;
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  margin: 2rem 0;
+  padding: 2rem;
+  width: 90vw;
+  max-width: 500px;
+  transition: box-shadow 0.3s, background 0.3s;
+  position: relative;
+}
+
+.lesson:hover {
+  box-shadow: 0 12px 40px 0 rgba(31, 38, 135, 0.25), 0 2px 8px #b0c4de88;
+  background: rgba(255,255,255,0.85);
+}
+
+h2 {
+  margin-top: 0;
+  color: #2d3a4a;
+  font-weight: 600;
+}
+
+ul {
+  padding-left: 1.2em;
+}
+
+li {
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  border-left: 4px solid #b0c4de55;
+  padding-left: 0.7em;
+  border-radius: 8px;
+  background: rgba(240,245,255,0.4);
+}
+
+#lang-toggle, #music-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  margin-left: 0.5rem;
+  background: linear-gradient(135deg, #f8fafc 60%, #e0eafc 100%);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px #b0c4de88, 0 1.5px 4px #b0c4de44;
+  width: 48px;
+  height: 48px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  z-index: 10;
+  outline: none;
+}
+
+#music-toggle {
+  right: 4.5rem;
+}
+
+#lang-toggle:hover, #music-toggle:hover {
+  background: #e0eafc;
+  box-shadow: 0 4px 16px #b0c4decc;
+  transform: scale(1.08);
+}
+
+iframe#lofi-music {
+  display: none; /* Oculto por defecto, se muestra solo si se quiere */
+}
+
+#music-section {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 5;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .lesson {
+    padding: 1rem;
+    max-width: 98vw;
+  }
+  #site-title {
+    font-size: 2rem;
+  }
+  #lang-toggle, #music-toggle {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+} 

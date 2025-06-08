@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduChill - Aprende Relajado</title>
+  <!-- Enlace a los estilos principales -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- Buenas prácticas: cargar scripts al final del body y usar defer si es necesario -->
+</head>
+<body>
+  <!-- Botón para cambiar de idioma -->
+  <button id="lang-toggle" aria-label="Cambiar idioma / Change language">EN/ES</button>
+
+  <!-- Encabezado principal -->
+  <header>
+    <h1 id="site-title">EduChill</h1>
+    <p id="site-desc">Aprende relajado: inglés, matemáticas y lógica de programación</p>
+  </header>
+
+  <!-- Música de fondo (YouTube embed, lo-fi, sin autoplay) -->
+  <section id="music-section">
+    <iframe id="lofi-music" width="0" height="0" src="https://www.youtube.com/embed/jfKfPfyJRdk?autoplay=1&loop=1&playlist=jfKfPfyJRdk" title="lofi hip hop radio" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    <button id="music-toggle" aria-label="Pausar/Reanudar música">🔊</button>
+  </section>
+
+  <!-- Contenido principal con lecciones -->
+  <main id="lessons-container">
+    <!-- Las lecciones se cargarán dinámicamente aquí -->
+  </main>
+
+  <!-- Scripts: primero lessons.js, luego main.js -->
+  <script src="scripts/lessons.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html> 
